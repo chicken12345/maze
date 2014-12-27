@@ -1,48 +1,22 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="controls_if" id="276" inline="false" x="-4" y="16">
+  <block type="controls_if" id="435" inline="false" x="-41" y="18">
     <value name="IF0">
-      <block type="sensor_button" id="314">
+      <block type="sensor_button" id="613">
         <field name="OBJECT">UP</field>
       </block>
     </value>
     <statement name="DO0">
-      <block type="movement_forward" id="358"></block>
-    </statement>
-    <next>
-      <block type="controls_if" id="285" inline="false">
-        <value name="IF0">
-          <block type="sensor_button" id="321">
-            <field name="OBJECT">DOWN</field>
-          </block>
-        </value>
-        <statement name="DO0">
-          <block type="movement_reverse" id="368"></block>
-        </statement>
+      <block type="movement_forward" id="625">
         <next>
-          <block type="controls_if" id="327" inline="false">
-            <value name="IF0">
-              <block type="sensor_button" id="340">
-                <field name="OBJECT">LEFT</field>
+          <block type="robot_delay" id="615" inline="true">
+            <value name="DELAY">
+              <block type="math_number" id="632">
+                <field name="NUM">1000</field>
               </block>
             </value>
-            <statement name="DO0">
-              <block type="movement_left" id="378"></block>
-            </statement>
-            <next>
-              <block type="controls_if" id="333" inline="false">
-                <value name="IF0">
-                  <block type="sensor_button" id="347">
-                    <field name="OBJECT">RIGHT</field>
-                  </block>
-                </value>
-                <statement name="DO0">
-                  <block type="movement_right" id="388"></block>
-                </statement>
-              </block>
-            </next>
           </block>
         </next>
       </block>
-    </next>
+    </statement>
   </block>
 </xml>
