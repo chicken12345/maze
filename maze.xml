@@ -1,35 +1,47 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="controls_if" id="163" inline="false" x="122" y="35">
-    <value name="IF0">
-      <block type="sensor_object" id="170">
-        <field name="OBJECT">RIGHTSIDE</field>
-      </block>
-    </value>
-    <statement name="DO0">
-      <block type="movement_forward" id="102"></block>
-    </statement>
+  <block type="movement_forward" id="235" x="-46" y="51">
     <next>
-      <block type="controls_if" id="218" inline="false">
-        <value name="IF0">
-          <block type="sensor_object" id="225">
-            <field name="OBJECT">RIGHTFRONT</field>
+      <block type="robot_delay" id="237" inline="true">
+        <value name="DELAY">
+          <block type="math_number" id="259">
+            <field name="NUM">2000</field>
           </block>
         </value>
-        <statement name="DO0">
-          <block type="movement_left" id="46">
+        <next>
+          <block type="controls_if" id="163" inline="false">
+            <value name="IF0">
+              <block type="sensor_object" id="170">
+                <field name="OBJECT">RIGHTSIDE</field>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="movement_forward" id="102"></block>
+            </statement>
             <next>
-              <block type="robot_delay" id="48" inline="true">
-                <value name="DELAY">
-                  <block type="math_number" id="55">
-                    <field name="NUM">1500</field>
+              <block type="controls_if" id="218" inline="false">
+                <value name="IF0">
+                  <block type="sensor_object" id="225">
+                    <field name="OBJECT">RIGHTFRONT</field>
                   </block>
                 </value>
+                <statement name="DO0">
+                  <block type="movement_left" id="46">
+                    <next>
+                      <block type="robot_delay" id="48" inline="true">
+                        <value name="DELAY">
+                          <block type="math_number" id="55">
+                            <field name="NUM">1500</field>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
               </block>
             </next>
           </block>
-        </statement>
+        </next>
       </block>
     </next>
   </block>
-  <block type="controls_if" id="212" inline="false" x="-206" y="370"></block>
 </xml>
