@@ -1,16 +1,13 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="procedures_defnoreturn" id="86" x="143" y="32">
-    <mutation></mutation>
-    <field name="NAME">do something</field>
-    <statement name="STACK">
-      <block type="procedures_ifreturn" id="82" inline="true">
-        <mutation value="0"></mutation>
-        <value name="CONDITION">
-          <block type="sensor_object" id="36">
+  <block type="movement_forward" id="102" x="188" y="46">
+    <next>
+      <block type="controls_if" id="163" inline="false">
+        <value name="IF0">
+          <block type="sensor_object" id="170">
             <field name="OBJECT">RIGHTFRONT</field>
           </block>
         </value>
-        <next>
+        <statement name="DO0">
           <block type="movement_left" id="46">
             <next>
               <block type="robot_delay" id="48" inline="true">
@@ -25,8 +22,11 @@
               </block>
             </next>
           </block>
+        </statement>
+        <next>
+          <block type="movement_stop" id="196"></block>
         </next>
       </block>
-    </statement>
+    </next>
   </block>
 </xml>
