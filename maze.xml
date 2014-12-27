@@ -1,22 +1,29 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="controls_if" id="1" inline="false" x="-41" y="18">
-    <value name="IF0">
-      <block type="sensor_button" id="2">
-        <field name="OBJECT">UP</field>
-      </block>
-    </value>
-    <statement name="DO0">
-      <block type="movement_forward" id="3">
-        <next>
-          <block type="robot_delay" id="4" inline="true">
-            <value name="DELAY">
-              <block type="math_number" id="5">
-                <field name="NUM">1000</field>
-              </block>
-            </value>
+  <block type="movement_forward" id="15" x="179" y="34">
+    <next>
+      <block type="controls_if" id="21" inline="false">
+        <value name="IF0">
+          <block type="sensor_object" id="28">
+            <field name="OBJECT">RIGHTFRONT</field>
           </block>
+        </value>
+        <statement name="DO0">
+          <block type="movement_left" id="38">
+            <next>
+              <block type="robot_delay" id="40" inline="true">
+                <value name="DELAY">
+                  <block type="math_number" id="47">
+                    <field name="NUM">1000</field>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <next>
+          <block type="movement_stop" id="57"></block>
         </next>
       </block>
-    </statement>
+    </next>
   </block>
 </xml>
