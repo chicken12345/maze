@@ -1,16 +1,16 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="controls_if" id="435" inline="false" x="-41" y="18">
+  <block type="controls_if" id="1" inline="false" x="-41" y="18">
     <value name="IF0">
-      <block type="sensor_button" id="613">
+      <block type="sensor_button" id="2">
         <field name="OBJECT">UP</field>
       </block>
     </value>
     <statement name="DO0">
-      <block type="movement_forward" id="625">
+      <block type="movement_forward" id="3">
         <next>
-          <block type="robot_delay" id="615" inline="true">
+          <block type="robot_delay" id="4" inline="true">
             <value name="DELAY">
-              <block type="math_number" id="632">
+              <block type="math_number" id="5">
                 <field name="NUM">1000</field>
               </block>
             </value>
