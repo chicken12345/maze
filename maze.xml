@@ -1,9 +1,17 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="movement_forward" id="102" x="188" y="46">
+  <block type="controls_if" id="163" inline="false" x="122" y="35">
+    <value name="IF0">
+      <block type="sensor_object" id="170">
+        <field name="OBJECT">RIGHTSIDE</field>
+      </block>
+    </value>
+    <statement name="DO0">
+      <block type="movement_forward" id="102"></block>
+    </statement>
     <next>
-      <block type="controls_if" id="163" inline="false">
+      <block type="controls_if" id="218" inline="false">
         <value name="IF0">
-          <block type="sensor_object" id="170">
+          <block type="sensor_object" id="225">
             <field name="OBJECT">RIGHTFRONT</field>
           </block>
         </value>
@@ -16,17 +24,12 @@
                     <field name="NUM">1500</field>
                   </block>
                 </value>
-                <next>
-                  <block type="movement_stop" id="65"></block>
-                </next>
               </block>
             </next>
           </block>
         </statement>
-        <next>
-          <block type="movement_stop" id="196"></block>
-        </next>
       </block>
     </next>
   </block>
+  <block type="controls_if" id="212" inline="false" x="-206" y="370"></block>
 </xml>
